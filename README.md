@@ -79,7 +79,7 @@ See [RESEARCH.md](RESEARCH.md) for the full survey. In short: Claude builds dire
 python -m unittest discover -s tests -v
 ```
 
-The suite checks every SKILL.md (frontmatter, length, that each linked reference exists) and runs every script against fixtures. CI runs it on Linux and Windows with Python 3.9 and 3.12.
+The suite checks every SKILL.md (frontmatter, length, that each linked reference exists) and runs every script against fixtures. CI runs it on Linux and Windows with Python 3.10 and 3.12.
 
 ## Credits
 
