@@ -71,8 +71,13 @@ def scan_python(path, src, out):
                     v = lit(node.value)
                     if v is not None and not (isinstance(v, str) and len(v) > 80):
                         out.append(("constant", path, node.lineno, t.id, repr(v)))
-                    elif isinstance(node.value, (ast.List, ast.Tuple, ast.Dict)) and ORDERED.search(t.id):
-                        out.append(("ordered", path, node.lineno, t.id, "%d items" % len(getattr(node.value, "elts", getattr(node.value, "keys", [])))))
+                    elif isinstance(node.value, (ast.List, ast.Tuple)) and ORDERED.search(t.id):
+                        out.append(("ordered", path, node.lineno, t.id, "%d items" % len(node.value.elts)))
+                    elif isinstance(node.value, (ast.List, ast.Tuple, ast.Set)) and node.value.elts \
+                            and all(lit(e) is not None for e in node.value.elts):
+                        vals = ", ".join(repr(lit(e)) for e in node.value.elts[:4])
+                        more = ", ..." if len(node.value.elts) > 4 else ""
+                        out.append(("collection", path, node.lineno, t.id, "%s%s" % (vals, more)))
     for node in ast.walk(tree):
         if isinstance(node, ast.Compare):
             for comp in [node.left] + list(node.comparators):
@@ -113,6 +118,8 @@ def question(kind, name, value, loc):
         return "Why `%s=%s` (%s)? What did you trade off?" % (name, value, loc)
     if kind == "model":
         return "Why model `%s` (%s) for this step? What did you compare it against, and at what cost?" % (value, loc)
+    if kind == "collection":
+        return "Why exactly these values in `%s` (%s: %s)? How did you choose them, and what input slips past the list?" % (name, loc, value)
     if kind == "ordered":
         return "Justify the order of `%s` (%s, %s). What happens if two entries are swapped? Is there a test that proves the order?" % (name, loc, value)
     return name
@@ -159,10 +166,12 @@ def main():
         status = ""
         if a.constants:
             v = str(value).strip("'\"")
-            ok = (kind in ("constant", "ordered") and re.search(r"\b%s\b" % re.escape(name), const_text)) or \
-                 (kind != "constant" and v and v in const_text)
+            if kind in ("constant", "ordered", "collection"):
+                ok = bool(re.search(r"\b%s\b" % re.escape(name), const_text))
+            else:
+                ok = bool(v) and v in const_text
             status = "COVERED" if ok else "MISSING"
-            if not ok and kind in ("constant", "threshold", "setting", "model"):
+            if not ok:
                 missing += 1
         rows.append((status, kind, "%s:%d" % (path, line), question(kind, name, value, "%s:%d" % (path, line))))
     if a.shuffle:
