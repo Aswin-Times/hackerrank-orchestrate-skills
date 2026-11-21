@@ -49,14 +49,14 @@ Never edit the starter's `AGENTS.md`. If `CLAUDE.md` is only `@AGENTS.md`, keep 
 
 | Symptom | Go to |
 |---|---|
-| Log entry missing, `tool=`/`model=` wrong | kickoff: `references/log-format.md`, re-run `check_log.py` |
+| Log entry missing, `tool=`/`model=` wrong | `hr-orchestrate-kickoff/references/log-format.md`, re-run `check_log.py` |
 | Unsure what a column or value means | kickoff: re-read the statement, record the reading in CONTRACT.md as an assumption |
-| Run crashes partway | build: `references/guardrails.md` (failure handling, checkpointing) |
+| Run crashes partway | `hr-orchestrate-build/references/guardrails.md` (failure handling, checkpointing) |
 | Invalid label, bad JSON, wrong header | build: guardrails (schema); test-fix: `preflight.py` |
 | Same input, different output | test-fix: determinism section; build: caching |
 | Great on samples, unsure it generalises | test-fix: overfitting checks |
 | Wrong row, cause unknown | test-fix: trace one input end to end |
-| Right value, weak justification | test-fix: `references/justification.md` |
+| Right value, weak justification | `hr-orchestrate-test-fix/references/justification.md` |
 | Prompt injection got through | build: guardrails (injection) |
 | Cannot defend a number | interview: CONSTANTS.md |
 | Behind schedule | `references/behind-schedule.md` |
