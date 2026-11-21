@@ -1,0 +1,11 @@
+request_id,decision,policy_id,justification
+R101,APPROVE,P1,"APPROVE under P1: unopened, 3 days since purchase (limit 30)."
+R102,APPROVE,P3,"APPROVE under P3: gold exception, 44 days since purchase (gold limit 45)."
+R103,DENY,P3,"DENY under P3: 31 days since purchase, outside P1/P2 limits."
+R104,APPROVE,P2,"APPROVE under P2: opened, 14 days, amount 200.00 within 200."
+R105,ESCALATE,P4,ESCALATE under P4: message mentions lawyer.
+R106,DENY,P3,"DENY under P3: 50 days since purchase, outside P1/P2 limits."
+R107,DENY,P3,"DENY under P3: 15 days since purchase, outside P1/P2 limits."
+R108,APPROVE,P1,"APPROVE under P1: unopened, 9 days since purchase (limit 30)."
+R109,APPROVE,P2,"APPROVE under P2: opened, 1 day, amount 120.00 within 200."
+R110,APPROVE,P3,"APPROVE under P3: gold exception, 20 days since purchase (gold limit 45)."

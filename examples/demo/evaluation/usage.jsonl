@@ -1,0 +1,4 @@
+{"run_id":"final","row_id":"R101","provider":"anthropic","model":"claude-haiku-5-5","input_tokens":412,"output_tokens":38,"cached":false}
+{"run_id":"final","row_id":"R105","provider":"anthropic","model":"claude-haiku-5-5","input_tokens":405,"output_tokens":41,"cached":false}
+{"run_id":"final","row_id":"R105","provider":"anthropic","model":"claude-sonnet-5-5","input_tokens":1630,"output_tokens":122,"cached":false}
+{"run_id":"final","row_id":"R109","provider":"anthropic","model":"claude-haiku-5-5","input_tokens":431,"output_tokens":40,"cached":true}

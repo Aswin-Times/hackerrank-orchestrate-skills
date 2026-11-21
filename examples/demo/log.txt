@@ -1,0 +1,23 @@
+## [2026-12-12T12:31:04Z] SESSION START
+
+tool=Claude Code
+model=claude-opus-5-5
+Repo Root: /home/me/refund-desk
+Branch: main
+
+## [2026-12-12T12:33:40Z] Read the starter and write the contract
+
+User Prompt (verbatim, secrets redacted):
+Use hr-orchestrate. Read AGENTS.md and the problem statement, then write docs/CONTRACT.md. Don't write agent code yet.
+
+Agent Response Summary:
+Read AGENTS.md, problem_statement.md and the dataset. Wrote docs/CONTRACT.md: 4 output columns, 10 evaluation rows, enums APPROVE/DENY/ESCALATE and P1-P4. Flagged one ambiguity: opened items at 15-30 days fit no rule; proposed DENY under P3 and asked for confirmation.
+
+Actions:
+* wrote docs/CONTRACT.md
+* ran contract_extract.py and profile_data.py
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main

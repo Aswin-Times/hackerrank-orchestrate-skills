@@ -1,0 +1,7 @@
+request_id,decision,policy_id,justification
+R001,APPROVE,P1,"APPROVE under P1: unopened, 10 days since purchase (limit 30)."
+R002,DENY,P3,"DENY under P3: 40 days since purchase, outside P1/P2 limits."
+R003,APPROVE,P3,"APPROVE under P3: gold exception, 38 days since purchase (gold limit 45)."
+R004,ESCALATE,P2,"ESCALATE under P2: opened, 7 days, amount 650.00 above 200."
+R005,APPROVE,P2,"APPROVE under P2: opened, 5 days, amount 30.00 within 200."
+R006,ESCALATE,P4,ESCALATE under P4: message mentions fraud and chargeback.
