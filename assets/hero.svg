@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="hackerrank-orchestrate-skills: six Claude Code skills for the 24-hour HackerRank Orchestrate hackathon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="360" rx="18" fill="url(#bg)"/>
+  <g opacity="0.10" stroke="#a5b4fc" stroke-width="1">
+    <path d="M880 0v360M940 0v360M1000 0v360M1060 0v360M1120 0v360M1180 0v360M1240 0v360"/>
+    <path d="M840 40h440M840 100h440M840 160h440M840 220h440M840 280h440M840 340h440"/>
+  </g>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="64" y="86" fill="#a5b4fc" font-size="18" font-weight="600" letter-spacing="3">CLAUDE CODE SKILLS · UNOFFICIAL</text>
+    <text x="64" y="146" fill="#ffffff" font-size="50" font-weight="700">hackerrank-orchestrate-skills</text>
+    <rect x="64" y="164" width="300" height="5" rx="2.5" fill="url(#glow)"/>
+    <text x="64" y="214" fill="#cbd5e1" font-size="22">From starter repo to verified submission in 24 hours:</text>
+    <text x="64" y="244" fill="#cbd5e1" font-size="22">contract, build, test-fix, interview prep, packaging.</text>
+    <g font-size="17" font-weight="600">
+      <rect x="64" y="280" width="148" height="40" rx="20" fill="#312e81" stroke="#6366f1"/>
+      <text x="138" y="306" fill="#e0e7ff" text-anchor="middle">Code zip 30%</text>
+      <rect x="224" y="280" width="168" height="40" rx="20" fill="#134e4a" stroke="#14b8a6"/>
+      <text x="308" y="306" fill="#ccfbf1" text-anchor="middle">Output CSV 30%</text>
+      <rect x="404" y="280" width="178" height="40" rx="20" fill="#4a044e" stroke="#c026d3"/>
+      <text x="493" y="306" fill="#fae8ff" text-anchor="middle">AI interview 30%</text>
+      <rect x="594" y="280" width="164" height="40" rx="20" fill="#451a03" stroke="#d97706"/>
+      <text x="676" y="306" fill="#fef3c7" text-anchor="middle">Transcript 10%</text>
+    </g>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" xml:space="preserve">
+    <rect x="890" y="70" width="330" height="222" rx="12" fill="#0b1020" stroke="#334155"/>
+    <circle cx="912" cy="92" r="6" fill="#ff5f57"/><circle cx="932" cy="92" r="6" fill="#febc2e"/><circle cx="952" cy="92" r="6" fill="#28c840"/>
+    <text x="912" y="132" fill="#c4b5fd">&gt; use hr-orchestrate</text>
+    <text x="912" y="162" fill="#4ade80">✓ kickoff   CONTRACT.md</text>
+    <text x="912" y="188" fill="#4ade80">✓ build     output.csv</text>
+    <text x="912" y="214" fill="#4ade80">✓ test-fix  VERDICT: KEEP</text>
+    <text x="912" y="240" fill="#4ade80">✓ interview drill ready</text>
+    <text x="912" y="266" fill="#fbbf24">→ package   READY</text>
+  </g>
+</svg>

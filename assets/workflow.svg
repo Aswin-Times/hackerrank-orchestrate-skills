@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-label="Workflow: hr-orchestrate routes the challenge through kickoff, build, test-fix and package, with interview prep in parallel from hour 14">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="620" rx="16" fill="#ffffff" stroke="#d0d7de"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="40" y="48" fill="#0f172a" font-size="24" font-weight="700">How a challenge day runs with the skills</text>
+    <text x="40" y="74" fill="#64748b" font-size="15">Each phase ends at a gate: Claude does not move on until the gate's checks pass.</text>
+
+    <!-- router -->
+    <rect x="40" y="96" width="1200" height="52" rx="10" fill="#eef2ff" stroke="#6366f1"/>
+    <text x="60" y="128" fill="#3730a3" font-size="17" font-weight="700">hr-orchestrate</text>
+    <text x="200" y="128" fill="#4338ca" font-size="15">master plan · 24-hour clock · failure routing · hard rules · transcript discipline · docs/STATUS.md</text>
+
+    <g transform="translate(0,20)">
+    <!-- starter -->
+    <rect x="34" y="190" width="134" height="210" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="5 4"/>
+    <text x="100" y="270" fill="#334155" font-size="15" font-weight="700" text-anchor="middle">Starter</text>
+    <text x="100" y="292" fill="#334155" font-size="15" font-weight="700" text-anchor="middle">repo</text>
+    <text x="100" y="322" fill="#64748b" font-size="12" text-anchor="middle">AGENTS.md</text>
+    <text x="100" y="340" fill="#64748b" font-size="12" text-anchor="middle">problem_statement</text>
+    <text x="100" y="358" fill="#64748b" font-size="12" text-anchor="middle">dataset/</text>
+
+    <!-- phase boxes -->
+    <g font-size="14">
+      <rect x="190" y="190" width="230" height="210" rx="12" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1.5"/>
+      <text x="208" y="220" fill="#0f766e" font-size="16" font-weight="700">kickoff</text>
+      <text x="402" y="220" fill="#0f766e" font-size="13" text-anchor="end">hour 0-1</text>
+      <text x="208" y="250" fill="#134e4a">• read AGENTS.md first</text>
+      <text x="208" y="272" fill="#134e4a">• log.txt with exact tool=/model=</text>
+      <text x="208" y="294" fill="#134e4a">• docs/CONTRACT.md, cited</text>
+      <text x="208" y="316" fill="#134e4a">• profile data, pick archetype</text>
+      <rect x="204" y="350" width="202" height="34" rx="8" fill="#ccfbf1"/>
+      <text x="305" y="372" fill="#115e59" font-size="13" font-weight="600" text-anchor="middle">gate: check_log PASS</text>
+
+      <rect x="450" y="190" width="230" height="210" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="468" y="220" fill="#1d4ed8" font-size="16" font-weight="700">build</text>
+      <text x="662" y="220" fill="#1d4ed8" font-size="13" text-anchor="end">hour 1-8</text>
+      <text x="468" y="250" fill="#1e3a8a">• docs/DESIGN.md, agreed</text>
+      <text x="468" y="272" fill="#1e3a8a">• thin slice: 3 rows end to end</text>
+      <text x="468" y="294" fill="#1e3a8a">• cached, validated LLM client</text>
+      <text x="468" y="316" fill="#1e3a8a">• bank first valid output.csv</text>
+      <rect x="464" y="350" width="202" height="34" rx="8" fill="#dbeafe"/>
+      <text x="565" y="372" fill="#1e40af" font-size="13" font-weight="600" text-anchor="middle">gate: full CSV, preflight PASS</text>
+
+      <rect x="710" y="190" width="230" height="210" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+      <text x="728" y="220" fill="#c2410c" font-size="16" font-weight="700">test-fix</text>
+      <text x="922" y="220" fill="#c2410c" font-size="13" text-anchor="end">hour 8-18</text>
+      <text x="728" y="250" fill="#7c2d12">• score sample, error classes</text>
+      <text x="728" y="272" fill="#7c2d12">• trace one row end to end</text>
+      <text x="728" y="294" fill="#7c2d12">• one change, diff, verdict</text>
+      <text x="728" y="316" fill="#7c2d12">• overfitting + noise checks</text>
+      <rect x="724" y="350" width="202" height="34" rx="8" fill="#ffedd5"/>
+      <text x="825" y="372" fill="#9a3412" font-size="13" font-weight="600" text-anchor="middle">gate: eval report filled</text>
+
+      <rect x="970" y="190" width="270" height="210" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="988" y="220" fill="#15803d" font-size="16" font-weight="700">package</text>
+      <text x="1222" y="220" fill="#15803d" font-size="13" text-anchor="end">hour 20-24</text>
+      <text x="988" y="250" fill="#14532d">• freeze, final run, usage report</text>
+      <text x="988" y="272" fill="#14532d">• clean run from the zip contents</text>
+      <text x="988" y="294" fill="#14532d">• secret scan, exclusions</text>
+      <text x="988" y="316" fill="#14532d">• build submission/ + manifest</text>
+      <rect x="984" y="350" width="242" height="34" rx="8" fill="#dcfce7"/>
+      <text x="1105" y="372" fill="#166534" font-size="13" font-weight="600" text-anchor="middle">gate: package.py READY</text>
+    </g>
+
+    <!-- arrows between phases -->
+    <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arr)">
+      <path d="M170 295H186"/>
+      <path d="M422 295H446"/>
+      <path d="M682 295H706"/>
+      <path d="M942 295H966"/>
+    </g>
+    <!-- loop on test-fix back to build -->
+    <path d="M825 190C825 162 565 162 565 186" stroke="#f97316" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+    <text x="695" y="154" fill="#c2410c" font-size="13" text-anchor="middle">wrong rows? fix one stage at a time</text>
+
+    <!-- interview lane -->
+    <rect x="450" y="430" width="490" height="58" rx="12" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.5"/>
+    <text x="470" y="465" fill="#86198f" font-size="16" font-weight="700">interview</text>
+    <text x="560" y="465" fill="#701a75" font-size="14">from hour 14 · CONSTANTS.md · code drill · mock judge</text>
+
+    <!-- submission -->
+    <g font-size="14">
+      <rect x="40" y="520" width="1200" height="52" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+      <text x="60" y="552" fill="#0f172a" font-weight="700">submission/</text>
+      <text x="170" y="552" fill="#334155">code.zip · output.csv · log.txt · agent-trace.zip (if asked) · MANIFEST.md with SHA-256</text>
+      <text x="1222" y="552" fill="#15803d" font-weight="700" text-anchor="end">you upload it</text>
+    </g>
+    <path d="M1105 402V516" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+    </g>
+  </g>
+</svg>
